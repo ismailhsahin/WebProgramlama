@@ -204,3 +204,4 @@ C:\Users\ASUS\source\repos\Site\Site\obj\Debug\netcoreapp3.1\Razor\Views\Yazi\De
 C:\Users\ASUS\source\repos\Site\Site\obj\Debug\netcoreapp3.1\Razor\Views\Yazi\Details.cshtml.g.cs
 C:\Users\ASUS\source\repos\Site\Site\obj\Debug\netcoreapp3.1\Razor\Views\Yazi\Edit.cshtml.g.cs
 C:\Users\ASUS\source\repos\Site\Site\obj\Debug\netcoreapp3.1\Razor\Views\Yazi\Index.cshtml.g.cs
+C:\Users\ASUS\source\repos\Site\Site\obj\Debug\netcoreapp3.1\Razor\Views\Home\YaziDetay.cshtml.g.cs

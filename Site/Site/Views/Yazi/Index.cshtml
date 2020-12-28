@@ -46,7 +46,8 @@
                 @Html.DisplayFor(modelItem => item.Icerik)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Fotograf)
+                @*Html.DisplayFor(modelItem => item.Fotograf)*@
+                <img src="@Url.Content(item.Fotograf)" class="d-block w-100" asp-append-version="true" />
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.OlusturulmaTarihi)
