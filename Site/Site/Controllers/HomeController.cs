@@ -42,10 +42,13 @@ namespace Site.Controllers
         {
             return View();
         }
+        YaziYorum yy = new YaziYorum();
         public IActionResult YaziDetay(int id)
         {
-            var blogbul = _context.Yazi.Where(x => x.Id == id).ToList();
-            return View(blogbul);
+            //var blogbul = _context.Yazi.Where(x => x.Id == id).ToList();
+            yy.Deger1 = _context.Yazi.Where(x => x.Id == id).ToList();
+            yy.Deger2 = _context.Yorum.Where(x => x.Id == id).ToList();
+            return View(yy);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

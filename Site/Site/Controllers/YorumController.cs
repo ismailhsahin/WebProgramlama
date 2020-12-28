@@ -49,8 +49,8 @@ namespace Site.Controllers
         // GET: Yorum/Create
         public IActionResult Create()
         {
-            ViewData["KisiId"] = new SelectList(_context.Kisi, "Id", "Id");
-            ViewData["YaziId"] = new SelectList(_context.Yazi, "Id", "Id");
+            ViewData["KisiId"] = new SelectList(_context.Kisi, "Id", "Name");
+            ViewData["YaziId"] = new SelectList(_context.Yazi, "Id", "Baslik");
             return View();
         }
 
