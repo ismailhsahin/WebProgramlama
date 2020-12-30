@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Site.Data;
@@ -33,28 +34,34 @@ namespace Site.Controllers
             return View(db.ToList());
         }
 
-        public IActionResult Privacy()
+
+        public IActionResult Create()
         {
+            ViewData["YaziId"] = new SelectList(_context.Yazi, "Id", "Id");
             return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("Id,Isim,Mail,YorumIcerik,YaziId")] Yorum yorum)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(yorum);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            ViewData["YaziId"] = new SelectList(_context.Yazi, "Id", "Id", yorum.YaziId);
+            return View(yorum);
         }
 
-        public IActionResult Contact()
-        {
-            return View();
-        }
-        YaziYorum yy = new YaziYorum();
-        public IActionResult YaziDetay(int id)
-        {
-            //var blogbul = _context.Yazi.Where(x => x.Id == id).ToList();
-            yy.Deger1 = _context.Yazi.Where(x => x.Id == id).ToList();
-            yy.Deger2 = _context.Yorum.Where(x => x.Id == id).ToList();
-            return View(yy);
-        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        
     }
 }
