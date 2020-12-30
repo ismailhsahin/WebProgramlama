@@ -22,7 +22,7 @@ namespace Site.Controllers
         // GET: Yorum
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Yorum.Include(y => y.Kisi).Include(y => y.Yazi);
+            var applicationDbContext = _context.Yorum.Include(y => y.Yazi);
             return View(await applicationDbContext.ToListAsync());
         }
 
@@ -35,7 +35,6 @@ namespace Site.Controllers
             }
 
             var yorum = await _context.Yorum
-                .Include(y => y.Kisi)
                 .Include(y => y.Yazi)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (yorum == null)
@@ -49,8 +48,7 @@ namespace Site.Controllers
         // GET: Yorum/Create
         public IActionResult Create()
         {
-            ViewData["KisiId"] = new SelectList(_context.Kisi, "Id", "Name");
-            ViewData["YaziId"] = new SelectList(_context.Yazi, "Id", "Baslik");
+            ViewData["YaziId"] = new SelectList(_context.Yazi, "Id", "Id");
             return View();
         }
 
@@ -59,7 +57,7 @@ namespace Site.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,YorumBaslik,YorumIcerik,YaziId,KisiId")] Yorum yorum)
+        public async Task<IActionResult> Create([Bind("Id,Isim,Mail,YorumIcerik,YaziId")] Yorum yorum)
         {
             if (ModelState.IsValid)
             {
@@ -67,7 +65,6 @@ namespace Site.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["KisiId"] = new SelectList(_context.Kisi, "Id", "Id", yorum.KisiId);
             ViewData["YaziId"] = new SelectList(_context.Yazi, "Id", "Id", yorum.YaziId);
             return View(yorum);
         }
@@ -85,7 +82,6 @@ namespace Site.Controllers
             {
                 return NotFound();
             }
-            ViewData["KisiId"] = new SelectList(_context.Kisi, "Id", "Id", yorum.KisiId);
             ViewData["YaziId"] = new SelectList(_context.Yazi, "Id", "Id", yorum.YaziId);
             return View(yorum);
         }
@@ -95,7 +91,7 @@ namespace Site.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,YorumBaslik,YorumIcerik,YaziId,KisiId")] Yorum yorum)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Isim,Mail,YorumIcerik,YaziId")] Yorum yorum)
         {
             if (id != yorum.Id)
             {
@@ -122,7 +118,6 @@ namespace Site.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["KisiId"] = new SelectList(_context.Kisi, "Id", "Id", yorum.KisiId);
             ViewData["YaziId"] = new SelectList(_context.Yazi, "Id", "Id", yorum.YaziId);
             return View(yorum);
         }
@@ -136,7 +131,6 @@ namespace Site.Controllers
             }
 
             var yorum = await _context.Yorum
-                .Include(y => y.Kisi)
                 .Include(y => y.Yazi)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (yorum == null)

@@ -42,12 +42,12 @@
                     <!-- Date/Time -->
                     <p align="right">Posted on @item.OlusturulmaTarihi</p>
 
-
-                    <hr>
                     <!-- Post Content -->
-                    <a class="mt-4" href="Home/YaziDetay/@item.Id">@item.Baslik</a>
+                    <h2 class="mt-4">@item.Baslik</h2>
 
-                    <p>@item.Icerik</p>
+                    <p>@item.Icerik.Substring(0,40)</p>
+
+                    <a class="mt-4" href="YaziDetay/Index/@item.Id">Devamını Oku...</a>
 
 
                     <hr>
@@ -130,102 +130,3 @@
 </body>
 
 </html>
-@*
-    <style type="text/css">.ticiFooterContent ul{margin:0;padding:0}.ticiFooterContent *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.ticiFooterContent .img-responsive{min-width:100%;max-width:100%}.ticiFooterContent li{margin:0;padding:0;list-style-type:none}.ticiFooterContent .footerRow{margin-left:-15px;margin-right:-15px}.ticiFooterContent .footerRow:After{clear:both;display:table;content:""}.ticiFooterContent .footerCol{padding-left:15px;padding-right:15px;float:left;position:relative;min-height:1px}.ticiFooterContent .footerCol{padding-left:15px;padding-right:15px;float:left;position:relative;min-height:1px}.ticiFooterContent .footerCol.f-col-2{width:20%}.ticiFooterContent .footerCol.f-col-12{width:100%}.ticiFooterContent .ticiFooterMenu h3{margin-bottom:20px;font-weight:600;font-size:15px;color:#222;padding:0}.ticiFooterContent .ticiFooterMenu h3 span{float:left}.ticiFooterContent .ticiFooterMenu h3 span:before{font-size:20px;line-height:15px}.ticiFooterContent .ticiFooterMenu ul.List{}.ticiFooterContent .ticiFooterMenu ul.List:After{clear:both;display:table;content:""}.ticiFooterContent .ticiFooterMenu ul.List.FooterSocial li{width:50%;float:left}.ticiFooterContent .ticiFooterMenu ul.List li.Item{margin-bottom:5px}.ticiFooterContent .ticiFooterMenu ul.List li.Item a.Link{color:#8e8e8e;font-size:13px;padding:0;font-weight:normal;line-height:23px;width:100%;text-decoration:none}.ticiFooterContent .ticiFooterMenu ul.List li.Item a.Link:hover{text-decoration:underline!important}.ticiFooterContent .ticiFooterMenu ul.List.FooterSocial li.Item a.Link{}.ticiFooterContent .ticiFooterMenu ul.List.FooterSocial li.Item a.Link i{width:20px;height:23px;line-height:23px;text-align:left;font-size:16px;margin-right:5px}.ticiFooterContent .ticiFooterMenu ul.List.FooterApp li.Item a.Link i{font-size:18px;line-height:23px;float:left;margin-right:5px}.ticiFooterContent .ticiBankaLogo{padding:30px 0;background-color:#fff;width:100%;text-align:center;float:left}.ticiFooterContent .ticiCopyDiv{padding:20px 0;text-align:center;font-size:12px}.ticiFooterContent .ticiSeoText{font-size:10px;margin-top:20px;color:#b7b7b7;text-align:center}.ticiFooterContent .ticiFooterTop{margin-bottom:40px}.ticiFooterContent .ticiBulten{display:block;margin:0 auto;max-width:490px;text-align:center}.ticiFooterContent .ticiBulten:After{clear:both;display:table;content:""}.ticiFooterContent .ticiBulten h2{font-weight:bold;font-size:18px;text-transform:uppercase;margin-bottom:0}.ticiFooterContent .ticiBulten p{font-size:12px;color:#8e8e8e;font-weight:600;margin-top:10px}.ticiFooterContent .ticiBultenContent{float:left;width:100%;margin-top:10px}.ticiFooterContent #divNewsLetter{display:block;padding:0;margin:0;float:right;position:relative;width:100%}.ticiFooterContent #divNewsLetter label{display:none}.ticiFooterContent #UpdatePanel1{position:relative;float:right;width:100%;padding:0;margin:0;border:0}.ticiFooterContent #txtbxNewsletterMail{display:inline-block;color:#999;background:#fff;border:1px solid #e0e0e0;width:100%;height:50px;padding:0 120px 0 10px;font-size:13px;text-align:left;font-weight:normal;border-radius:0;opacity:1}.ticiFooterContent #txtbxNewsletterMail::-webkit-input-placeholder{color:#999}.ticiFooterContent #txtbxNewsletterMail:-moz-placeholder{color:#999}.ticiFooterContent #txtbxNewsletterMail::-moz-placeholder{color:#999}.ticiFooterContent #txtbxNewsletterMail:-ms-input-placeholder{color:#999}.ticiFooterContent #txtbxNewsletterMail:focus{color:#999}.ticiFooterContent .newsbutton{float:right;position:absolute;top:9px;right:6px;width:108px;height:33px;text-transform:uppercase;color:#fff!important;border:none!important;border-radius:0;line-height:33px;background:#000!important;font-weight:normal;font-size:12px!important;padding:0;text-align:center}.ticiFooterContent .newsbutton:hover{background:#666!important}.ticiFooterContent .ebultenGelecek #divNewsLetter{display:block;padding:0}{.ticiFooterContent{margin:0 15px}.ticiFooterContent .footerCol.f-col-2{width:100%}.ticiFooterContent .ticiFooterMenu .footerCol .fmenu-wrap{border:1px solid #dedede;margin-bottom:-1px}.ticiFooterContent .ticiFooterMenu .footerCol:last-child .fmenu-wrap{margin-bottom:0}.ticiFooterContent .ticiFooterMenu .footerCol h3{line-height:30px;position:relative;text-align:left;padding-left:10px;margin-bottom:0;font-size:12px}.ticiFooterContent .ticiFooterMenu .footerCol h3 span:before{font-size:12px!important;line-height:30px}.ticiFooterContent .ticiFooterMenu .footerCol.active h3{border-bottom:1px solid #eee}.ticiFooterContent .ticiFooterMenu .footerCol h3:after{content:'+';position:absolute;right:0;width:30px;text-align:center}.ticiFooterContent .ticiFooterMenu .footerCol.active h3:after{content:'-'}.ticiFooterContent .ticiFooterMenu ul.List{display:none;margin:10px 0}.ticiFooterContent .ticiFooterMenu ul.List li.Item a.Link{padding:0;font-size:12px;text-align:left;display:block;padding-left:10px;line-height:20px}.ticiFooterContent .ticiFooterMenu .footerCol.active ul.List{display:block}}
-    </style>
-    <div class="ticiFooterContent">
-        <div class="ticiFooterTop">
-            <div class="ticiBulten">
-                <h2>bizden haberler</h2>
-
-                <p><span style="font-size:16px;"><a href="https://inalsilver.com/InstagramShop">https://inalsilver.com/InstagramShop</a>&nbsp;</span></p>
-
-                <div class="ticiBultenContent">&nbsp;</div>
-            </div>
-        </div>
-
-        <div class="ticiFooterCenter">
-            <div class="ticiContainer">
-                <div class="ticiFooterMenu footerRow">
-                    <div class="footerCol f-col-2">
-                        <div class="fmenu-wrap">
-                            <h3>Kurumsal</h3>
-
-                            <ul class="List">
-                                <li class="Item"><a class="Link" href="/Anasayfa">Anasayfa</a></li>
-                                <li class="Item"><a class="Link" href="/hakkimizda">Hakkımızda</a></li>
-                                <li class="Item"><a class="Link" href="/mağazalarimiz">Mağazalarımız</a></li>
-                                <li class="Item"><a class="Link" href="/iletisim1">İletişim</a></li>
-                                <li class="Item"><a class="Link" href="/mesafelisatişsözleşmesi">Mesafeli Satış Sözleşmesi</a></li>
-                                <li class="Item"><a class="Link" href="/kisisel-verilerin-korunmasi">Kişisel Verilerin Korunması</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="footerCol f-col-2">
-                        <div class="fmenu-wrap">
-                            <h3>Müşteri ilişkileri</h3>
-
-                            <ul class="List">
-                                <li class="Item"><a class="Link" href="/uyeol.aspx">Üyelik</a></li>
-                                <li class="Item"><a class="Link" href="/alişveriş">Alışveriş</a></li>
-                                <li class="Item"><a class="Link" href="/teslimatiade1">Teslimat&amp;İade</a></li>
-                                <li class="Item"><a class="Link" href="/siparistakip.aspx">Sipariş Takip</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="footerCol f-col-2">
-                        <div class="fmenu-wrap">
-                            <h3>Sosyal Medya</h3>
-
-                            <ul class="List FooterSocial">
-                                <li class="Item"><a class="Link" href="https://www.facebook.com/%C4%B0rem-Style-110893120657064/" target="_blank"><i class="fa fa-facebook"></i> Facebook</a></li>
-                                <li class="Item"><a class="Link" href="https://www.instagram.com/irem_style/?hl=tr" target="_blank"><i class="fa fa-instagram"></i> Instagram</a></li>
-                                <li class="Item"><a class="Link" href="https://twitter.com/inal_silver"><i class="fa fa-pinterest"></i> Twitter</a></li>
-                                <li class="Item"><a class="Link" href="">Youtube</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="footerCol f-col-2">
-                        <div class="fmenu-wrap">
-                            <h3>Uygulamalar</h3>
-
-                            <ul class="List FooterApp">
-                                <li class="Item"><a class="Link" href="/"><i class="fa fa-android"></i> Android App</a></li>
-                                <li class="Item"><a class="Link" href="/"><i class="fa fa-apple"></i> App Store App</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="ticiFooterBottom">
-            <div class="ticiContainer">
-                <div class="footerRow">
-                    <div class="footerCol f-col-12">
-                        <div class="ticiBankaLogo"><img alt="" class="img-responsive" src="https://cdn.ticimax.com/Uploads/hazirSablonResimleri/footerImg/bankimg.png" /></div>
-                    </div>
-                </div>
-
-                <div class="footerRow">
-                    <div class="footerCol f-col-12">
-                        <div class="ticiCopyDiv">© 2019 <strong>inalsilver.com</strong> - Tüm hakları saklıdır.</div>
-                    </div>
-                </div>
-
-                <div class="footerRow">
-                    <div class="footerCol f-col-12">
-                        <div class="ticiSeoText">
-                            &nbsp;
-                            <p>&nbsp;</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>$(document).ready(function () { $('#divNewsLetter').prependTo('.ticiBultenContent'); $(".ticiFooterMenu .footerCol h3").on("click", function (event) { $(this).parents(".footerCol").toggleClass("active"); event.preventDefault(); }); });</script>
-*@
