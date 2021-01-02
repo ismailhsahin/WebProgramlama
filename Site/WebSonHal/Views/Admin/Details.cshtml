@@ -1,0 +1,53 @@
+﻿@model WebSonHal.Models.YaziYorum
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h1>Details</h1>
+@foreach (var item in Model.Deger1)
+{
+    <div>
+        <h4>Yorum</h4>
+        <hr />
+        <dl class="row">
+
+            
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => item.Baslik)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => item.Baslik)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => item.Icerik)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => item.Icerik)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => item.Fotograf)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => item.Fotograf)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => item.OlusturulmaTarihi)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => item.OlusturulmaTarihi)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => item.Kategori)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => item.Kategori.Id)
+            </dd>
+            
+        </dl>
+    </div>
+<div>
+    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+}
