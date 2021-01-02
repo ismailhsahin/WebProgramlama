@@ -1,0 +1,34 @@
+﻿@using WebSonHal.Models
+@model List<Yazi>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+}
+
+<h1>Yazı Listesi</h1>
+
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>BAŞLIK</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+        <th>Detaylar</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Baslik</td>
+            <td><a href="/Admin/Delete/@item.Id" class="btn btn-danger">SİL</a></td>
+            <td><a href="/Admin/Edit/@item.Id" class="btn btn-warning">GÜNCELLE</a></td>
+            <td><a href="/Admin/Details/@item.Id" class="btn btn-secondary">DETAYLAR</a></td>
+        </tr>
+    }
+
+</table>
+<a href="/Admin/Create" class="btn btn-primary">Yeni Yazı</a>
+

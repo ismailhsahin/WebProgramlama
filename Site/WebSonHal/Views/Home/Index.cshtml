@@ -1,0 +1,80 @@
+﻿@model IEnumerable<WebSonHal.Models.Yazi>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/blog-post.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-8">
+                @foreach (var item in Model)
+                {
+                    <!-- Post Content Column -->
+
+
+                    <br />
+                    <!-- Preview Image -->
+                    <img class="img-fluid rounded" src="@item.Fotograf" alt="">
+
+
+                    <!-- Date/Time -->
+                    <p align="right">Posted on @item.OlusturulmaTarihi</p>
+
+                    <!-- Post Content -->
+                    <h2 class="mt-4">@item.Baslik</h2>
+
+                    <p>@item.Icerik.Substring(0, 40)</p>
+
+                    <a class="mt-4" href="YaziDetay/Index/@item.Id">Devamını Oku...</a>
+
+
+                    <hr>
+
+
+
+                }
+            </div>
+            
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
