@@ -34,13 +34,6 @@ using WebSonHal.Areas.Identity.Pages;
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\Areas\Identity\Pages\_ViewImports.cshtml"
-using WebSonHal.Models;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
 #line 1 "C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\Areas\Identity\Pages\Account\_ViewImports.cshtml"
 using WebSonHal.Areas.Identity.Pages.Account;
 
@@ -48,7 +41,7 @@ using WebSonHal.Areas.Identity.Pages.Account;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a3c7ebbf20c9d627ef3bde47a49a230f90041b07", @"/Areas/Identity/Pages/Account/_ViewImports.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c32b3430b674aa69962df4b5258ae45f26b61e97", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5fe28c26b795eee1feb5ce3f0d039e29faa8e2cb", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
     public class Areas_Identity_Pages_Account__ViewImports : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

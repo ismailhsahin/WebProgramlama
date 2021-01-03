@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -28,12 +29,14 @@ namespace WebSonHal.Controllers
             return View(deger);
         }
         // GET: Hakkimizda
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Index()
         {
             return View(await _context.Hakkimizda.ToListAsync());
         }
 
         // GET: Hakkimizda/Details/5
+
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -92,6 +95,7 @@ namespace WebSonHal.Controllers
         }
 
         // GET: Hakkimizda/Edit/5
+
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)

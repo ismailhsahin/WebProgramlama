@@ -2,21 +2,29 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
 using WebSonHal.Data;
 using WebSonHal.Models;
 
 namespace WebSonHal.Controllers
 {
+    [Authorize(Roles = "User")]
+    
     public class YorumController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly IStringLocalizer<YorumController> _localizer;
 
-        public YorumController(ApplicationDbContext context)
+        public YorumController(ApplicationDbContext context, IStringLocalizer<YorumController> localizer)
         {
             _context = context;
+            _localizer = _localizer;
         }
 
         // GET: Yorum
@@ -63,7 +71,7 @@ namespace WebSonHal.Controllers
             {
                 _context.Add(yorum);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Create));
             }
             ViewData["YaziId"] = new SelectList(_context.Yazi, "Id", "Id", yorum.YaziId);
             return View(yorum);

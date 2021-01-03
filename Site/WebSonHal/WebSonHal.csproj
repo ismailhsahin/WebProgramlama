@@ -10,6 +10,14 @@
     <Compile Remove="Data\Migrations\20210102110208_firstmigration.Designer.cs" />
     <Compile Remove="Data\Migrations\20210102111243_firstmigration.cs" />
     <Compile Remove="Data\Migrations\20210102111243_firstmigration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210102223829_initialcommit.cs" />
+    <Compile Remove="Data\Migrations\20210102223829_initialcommit.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210102224035_sonadogru.cs" />
+    <Compile Remove="Data\Migrations\20210102224035_sonadogru.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210102225800_sonadogru.cs" />
+    <Compile Remove="Data\Migrations\20210102225800_sonadogru.Designer.cs" />
+    <Compile Remove="Data\Migrations\20210102230850_tablosil.cs" />
+    <Compile Remove="Data\Migrations\20210102230850_tablosil.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,9 +1,12 @@
 ﻿@model IEnumerable<WebSonHal.Models.Yazi>
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@inject IOptions<RequestLocalizationOptions> Locoptions
 
 @{
+    
     ViewData["Title"] = "Home Page";
 }
-
+<partial name="_Culture" />
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,14 +27,13 @@
 
 <body>
     <!-- Page Content -->
+  
     <div class="container">
-
         <div class="row">
             <div class="col-lg-8">
                 @foreach (var item in Model)
                 {
                     <!-- Post Content Column -->
-
 
                     <br />
                     <!-- Preview Image -->
@@ -39,23 +41,26 @@
 
 
                     <!-- Date/Time -->
-                    <p align="right">Posted on @item.OlusturulmaTarihi</p>
+
+                    <p align="right">@localizer["Tarih"] @item.OlusturulmaTarihi</p>
 
                     <!-- Post Content -->
                     <h2 class="mt-4">@item.Baslik</h2>
 
-                    <p>@item.Icerik.Substring(0, 40)</p>
+                    <p>@item.Icerik.Substring(0, 10)</p>
 
-                    <a class="mt-4" href="YaziDetay/Index/@item.Id">Devamını Oku...</a>
+                    <table class="table culture-table">
+                        <tr>
+                            <a class="mt-4" href="/Home/YaziDetayIndex/@item.Id">@localizer["Oku"]</a>
+                        </tr>
+                    </table>
 
 
                     <hr>
 
-
-
                 }
             </div>
-            
+
 
         </div>
         <!-- /.row -->
@@ -74,6 +79,14 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function SetCulture(selectedValue) {
+            var culture = "/?culture" + selectedValue + "&ui-culture-" + selectedValue;
+            alert(culture);
+            document.getElementById("cultureForm").action = culture;
+            document.getElementById("cultureForm").submit();
+        }
+    </script>
 
 </body>
 

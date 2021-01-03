@@ -147,7 +147,6 @@ C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\WebSonHal
 C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\WebSonHal.TagHelpers.output.cache
 C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\WebSonHal.RazorCoreGenerate.cache
 C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -198,7 +197,6 @@ C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\Razor\Vie
 C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\Razor\Views\Yorum\Details.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\Razor\Views\Yorum\Edit.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\Razor\Views\Yorum\Index.cshtml.g.cs
-C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\Razor\Views\YaziDetay\Index.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\Razor\Views\Hakkimizda\Create.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\Razor\Views\Hakkimizda\Delete.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\Razor\Views\Hakkimizda\Details.cshtml.g.cs
@@ -217,3 +215,17 @@ C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\Razor\Are
 C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
+C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\Razor\Views\Role\Index.cshtml.g.cs
+C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\Razor\Views\Role\Create.cshtml.g.cs
+C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\WebSonHal.Resources.Views.Home.Index.en.resources
+C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\WebSonHal.csproj.GenerateResource.cache
+C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\bin\Debug\netcoreapp3.1\en\WebSonHal.resources.dll
+C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\en\WebSonHal.resources.dll
+C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\bin\Debug\netcoreapp3.1\tr\WebSonHal.resources.dll
+C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\WebSonHal.Resources.Controllers.HomeController.en.resources
+C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\WebSonHal.Resources.Controllers.HomeController.tr.resources
+C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\WebSonHal.Resources.Views.Home.Index.tr.resources
+C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\tr\WebSonHal.resources.dll
+C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Culture.cshtml.g.cs
+C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\Razor\Views\YaziDetay\Index.cshtml.g.cs
+C:\Users\ASUS\source\repos\WebSonHal\WebSonHal\obj\Debug\netcoreapp3.1\Razor\Views\Home\YaziDetayIndex.cshtml.g.cs

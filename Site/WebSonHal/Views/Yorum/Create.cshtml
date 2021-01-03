@@ -1,12 +1,13 @@
 ﻿@model WebSonHal.Models.Yorum
-
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@inject IOptions<RequestLocalizationOptions> Locoptions
 @{
     ViewData["Title"] = "Create";
 }
 
-<h1>Ekle</h1>
+<h1>Create</h1>
 
-<h4>Yorum</h4>
+<h4>Comment</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -29,12 +30,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="YorumIcerik" class="control-label"></label>
-                <input asp-for="YorumIcerik" class="form-control" />
+                @Html.TextAreaFor(x => x.YorumIcerik, 15, 5, new { @class = "form-control" })
                 <span asp-validation-for="YorumIcerik" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="YaziId" class="control-label"></label>
-                <select asp-for="YaziId" class ="form-control" asp-items="ViewBag.YaziId"></select>
+                <select asp-for="YaziId" class="form-control" asp-items="ViewBag.YaziId"></select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

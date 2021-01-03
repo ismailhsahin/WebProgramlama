@@ -7,7 +7,7 @@ using WebSonHal.Models;
 
 namespace WebSonHal.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<Admin>
+    public class ApplicationDbContext : IdentityDbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
@@ -18,6 +18,5 @@ namespace WebSonHal.Data
         public DbSet<Yazi> Yazi { get; set; }
         public DbSet<Yorum> Yorum { get; set; }
         public DbSet<Hakkimizda> Hakkimizda { get; set; }
-        public DbSet<Admin> Admin { get; set; }
     }
 }

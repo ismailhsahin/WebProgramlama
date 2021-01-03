@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Register";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    var roles = (List<IdentityRole>)ViewData["roles"];
 }
 
 <h1>@ViewData["Title"]</h1>
@@ -13,16 +14,6 @@
             <h4>Create a new account.</h4>
             <hr />
             <div asp-validation-summary="All" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Input.Name"></label>
-                <input asp-for="Input.Name" class="form-control" />
-                <span asp-validation-for="Input.Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Input.SurName"></label>
-                <input asp-for="Input.SurName" class="form-control" />
-                <span asp-validation-for="Input.SurName" class="text-danger"></span>
-            </div>
             <div class="form-group">
                 <label asp-for="Input.Email"></label>
                 <input asp-for="Input.Email" class="form-control" />
@@ -38,6 +29,7 @@
                 <input asp-for="Input.ConfirmPassword" class="form-control" />
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
+
             <button type="submit" class="btn btn-primary">Register</button>
         </form>
     </div>
